@@ -1,8 +1,12 @@
 cabal-version:       2.4
 name:                linux-capabilities
-version:             0.0.0.0
-synopsis:            Linux capabilities
-description:         Linux capabilities Haskell data type
+version:             0.1.0.0
+synopsis:            Linux capabilities Haskell data type
+description:
+    linux-capabilities provides a data type and documentation for the Linux capabilities(7).
+    .
+homepage:            https://github.com/softwarefactory-project/linux-capabilities-haskell#readme
+bug-reports:         https://github.com/softwarefactory-project/linux-capabilities-haskell/issues
 license:             Apache-2.0
 license-file:        LICENSE
 author:              Tristan de Cacqueray
@@ -10,13 +14,17 @@ maintainer:          Tristan de Cacqueray <tdecacqu@redhat.com>
 copyright:           2021 Red Hat
 category:            System
 build-type:          Simple
-extra-doc-files:     README.md
-                     CHANGELOG.md
+extra-doc-files:     CHANGELOG.md
+                     README.md
+extra-source-files:  codegen.hs
 tested-with:         GHC == 8.10.3
+
+source-repository head
+  type:                git
+  location:            https://github.com/softwarefactory-project/linux-capabilities-haskell.git
 
 library
   build-depends:       base < 5
-
   ghc-options:         -Wall
                        -Wcompat
                        -Widentities
@@ -33,8 +41,6 @@ library
     ghc-options:       -Wmissing-deriving-strategies
   if impl(ghc >= 8.10)
     ghc-options:       -Wunused-packages
-
   default-language:    Haskell2010
-  import:              common-options
   hs-source-dirs:      src
   exposed-modules:     System.Linux.Capabilities
