@@ -4,7 +4,7 @@
 
 ## 0.1.1.0
 
-* Add Ord instance.
+* Add Ord and Generic instance.
 
 ## 0.1.0.0
 

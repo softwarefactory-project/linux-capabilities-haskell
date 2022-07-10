@@ -1,3 +1,4 @@
+{-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE DerivingStrategies #-}
 
 -- |
@@ -5,6 +6,8 @@
 -- SPDX-License-Identifier: Apache-2.0
 -- Maintainer: Tristan de Cacqueray <tdecacqu@redhat.com>
 module System.Linux.Capabilities (Capability (..)) where
+
+import GHC.Generics (Generic)
 
 -- | Linux capabilities
 data Capability
@@ -202,4 +205,4 @@ data Capability
     -- - Allow PID selection during clone3()
     -- - Allow writing to ns_last_pid
     CAP_CHECKPOINT_RESTORE
-  deriving stock (Bounded, Enum, Eq, Ord, Read, Show)
+  deriving stock (Bounded, Enum, Eq, Ord, Read, Show, Generic)
