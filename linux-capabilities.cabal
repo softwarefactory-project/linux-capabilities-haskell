@@ -1,6 +1,6 @@
 cabal-version:       2.4
 name:                linux-capabilities
-version:             0.1.0.0
+version:             0.1.1.0
 synopsis:            Linux capabilities Haskell data type
 description:
     linux-capabilities provides a data type and documentation for the Linux capabilities(7).

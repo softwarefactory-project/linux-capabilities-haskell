@@ -202,4 +202,4 @@ data Capability
     -- - Allow PID selection during clone3()
     -- - Allow writing to ns_last_pid
     CAP_CHECKPOINT_RESTORE
-  deriving stock (Bounded, Enum, Eq, Read, Show)
+  deriving stock (Bounded, Enum, Eq, Ord, Read, Show)
